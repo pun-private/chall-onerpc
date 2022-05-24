@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>One\RPC - One API to develop them all !</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/coderdocs-logo.svg"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/github.min.css">
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+	<style>
+		
+		/* Cursor Styling */
+		.cursor::after {
+			content: "";
+			display: inline-block;
+			margin-left: 3px;
+			background-color: rgb(41, 202, 41);
+			animation-name: blink;
+			animation-duration: 0.5s;
+			animation-iteration-count: infinite;
+		}
+		
+		pre.cursor::after {
+			height: 14px;
+			width: 8px;
+		}
+		
+		p.cursor::after {
+			height: 14px;
+			width: 8px;
+		}
+		
+		@keyframes blink {
+			0% {
+			opacity: 1;
+			}
+			49% {
+			opacity: 1;
+			}
+			50% {
+			opacity: 0;
+			}
+			100% {
+			opacity: 0;
+			}
+		}
+	</style>
+
+</head> 
+
+<body>    
+    <header class="header fixed-top">	 
+	       
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper" style="padding-left:50px;">
+	                <div class="site-logo"><a class="navbar-brand" href="/"><img class="logo-icon me-2" src="assets/images/coderdocs-logo.svg" alt="logo"><span class="logo-text">One<span class="text-alt">\RPC</span></span></a></div>    
+                </div><!--//docs-logo-wrapper-->
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center" style="padding-right:50px;">
+	
+		            <a href="download/onerpc_latest.zip" class="btn btn-primary d-none d-lg-flex">Download</a>
+	            </div><!--//docs-top-utilities-->
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    
+    <div class="page-header theme-bg-dark py-5 text-center position-relative">
+	    <div class="theme-bg-shapes-right"></div>
+	    <div class="theme-bg-shapes-left"></div>
+	    <div class="container">
+		    <h1 class="page-heading single-col-max mx-auto">One API to develop them all !</h1>
+			<div class="page-intro single-col-max mx-auto">Discover our unique approach for API development.</div>
+	    </div>
+    </div><!--//page-header-->
+
+   <div class="page-content">
+	   <div class="container"><div class="row justify-content-center">
+		
+		   <div class="col-4 py-3">
+			   <h4>RPC Request</h4>
+				<div class="docs-code-block" id="output" >
+					<pre class="shadow-lg rounded cursor" style="min-height:255px;" id="request-api"></pre>
+					<p></p>
+				</div><!--//docs-code-block-->
+			</div>
+			<div class="col-4 py-3">
+				<h4>RPC Response</h4>
+				<div class="docs-code-block" style="min-height:100px;">
+					<div class="alert alert-warning" role="alert" id="waiting">
+						Waiting for request...
+					  </div>
+					<div class="alert alert-success" role="alert" id="received">
+						Response sent !
+					</div>
+					<br>
+					<pre class="shadow-lg rounded" style="display:none" id="received"><code class="json hljs"><span class="hljs-comment" >// Response sent !</span></code></pre>
+					<pre class="shadow-lg rounded" style="display:none" id="response-api-0"><code class="json hljs">{
+	<span class="hljs-attr">"result"</span>: <span class="hljs-string">"Hello World !"</span>
+}
+					</code></pre>
+					<pre class="shadow-lg rounded" style="display:none" id="response-api-1"><code class="json hljs">{
+	<span class="hljs-attr">"result"</span>: <span class="hljs-string">"Welcome chuck."</span>
+}
+					</code></pre>
+
+					<pre class="shadow-lg rounded" style="display:none" id="response-api-2"><code class="json hljs">{
+    <span class="hljs-attr">"result"</span>: [
+        <span class="hljs-attr"></span>"event_id"</span>: <span class="hljs-string">"KSj8ackfzome_xu42xrid"</span>
+    ]
+}
+					</code></pre>
+
+					<pre class="shadow-lg rounded" style="display:none" id="response-api-3"><code class="json hljs">{
+	<span class="hljs-attr">"result"</span>: <span class="hljs-string">"0N3 20U73 F02 4LL !"</span>
+}
+					</code></pre>
+					<pre class="shadow-lg rounded" style="display:none" id="response-api-4"><code class="json hljs">{
+	<span class="hljs-attr">"result"</span>: <span class="hljs-string">"Plop"</span>
+}
+					</code></pre>
+
+
+                </div><!--//docs-code-block-->
+			</div>
+
+
+	   </div></div>
+
+
+
+
+
+
+	   <!-- <div class="container"> -->
+		<section class="cta-section text-center py-5 theme-bg-dark position-relative">
+			<div class="container">
+				<h3 class="mb-2 text-white mb-3">Documentation</h3>
+				<div class="section-intro text-white mb-3 single-col-max mx-auto">Check out our awesome documentation and develop your own RPC API !</div>
+				<div class="pt-3 text-center">
+					<a class="btn btn-light" href="documentation.html">Read now ! <i class="fas fa-arrow-alt-circle-right ml-2"></i></a>
+				</div>
+			</div>
+		</section> <!-- //cta-section -->
+	   <!-- </div> -->
+	
+	    <div class="container">
+		    <div class="docs-overview py-5">
+			    <div class="row justify-content-center">
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder me-2">
+								        <i class="fas fa-map-signs"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Introduction</span>
+							    </h5>
+							    <div class="card-text">
+								    Understand the basics of the RPC API and why  it is both simple and powerful.
+							    </div>
+							    <a class="card-link-mask" href="documentation.html#section-1"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder me-2">
+								        <i class="fas fa-arrow-down"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Installation</span>
+							    </h5>
+							    <div class="card-text">
+								    How to setup your project locally or deploy it on your production servers.
+							    </div>
+							    <a class="card-link-mask" href="documentation.html#section-2"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder me-2">
+								        <i class="fas fa-box fa-fw"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">API Examples</span>
+							    </h5>
+							    <div class="card-text">
+								    A set of examples to get you started with your developments and master the API architecture.
+								</div>
+							    <a class="card-link-mask" href="documentation.html#section-3"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder me-2">
+								        <i class="fas fa-book-reader"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Changelog</span>
+							    </h5>
+							    <div class="card-text">
+								    List of all updates, bug fixes and security updates.						    
+								</div>
+							    <a class="card-link-mask" href="documentation.html#section-4"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+					<div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder me-2">
+								        <i class="fas fa-lightbulb"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">FAQs</span>
+							    </h5>
+							    <div class="card-text">
+								    The questions we get frequently asked on our project and advices.
+								</div>
+							    <a class="card-link-mask" href="documentation.html#section-5"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+			    </div><!--//row-->
+		    </div><!--//container-->
+		</div><!--//container-->
+    </div><!--//page-content-->
+
+	<section class="cta-section text-center py-5 theme-bg-dark position-relative">
+		<div class="theme-bg-shapes-right"></div>
+		<div class="theme-bg-shapes-left"></div>
+		<div class="container">
+			<h3 class="mb-2 text-white mb-3">Security</h3>
+			<div class="section-intro text-white mb-3 single-col-max mx-auto">We take security very seriously and if you believe you found a vulnerability, send us proof !<br> We hid a "flag" somewhere in our <a class="text-white" href="/demo-rpc/">demo RPC instance accessible here.</a></div>
+		</div>
+	</section> <!-- //cta-section -->	
+
+    <footer class="footer">
+
+	    <div class="footer-bottom text-center py-5">
+
+	        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+            
+	        
+	    </div>
+	    
+    </footer>
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    <!-- Page Specific JS -->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script> 
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <!--<script src="assets/js/docs.js"></script> -->
+
+	<script>
+		hljs.highlightBlock(document.getElementById('output'));
+// values to keep track of the number of letters typed, which quote to use. etc. Don't change these values.
+var i = 0,
+    a = 0,
+    isBackspacing = false,
+    isParagraph = false;
+
+// Typerwrite text content. Use a pipe to indicate the start of the second line "|".  
+var textArray = [` {
+     "api"  : "Greeting",
+     "func" : "hello"
+ }`, ` {
+     "api"  : "Greeting",
+     "func" : "welcome",
+     "args" : [
+         "Chuck"
+     ]
+ }`, ` {
+     "api"  : "Calendar",
+     "func" : "addReminder",
+     "args" : [
+         "title" : "Apocalypse",
+         "date"  : "2000-01-01T00:00:01.000Z",
+         "invite": [
+             "jean.doux@empty.void",
+             "chocolatine@real.name"
+         ]
+     ]
+ }`,  `{
+     "api"  : "Language\\\\Leetspeak",
+     "func" : "encode",
+     "args" : [
+         "One route for all !"
+     ]
+ }`, ` {
+     "api"  : "Language\\\\Binary",
+     "func" : "decode",
+     "args" : [
+         "1010000 1101100 1101111 1110000"
+     ]
+ }`
+];
+
+// Speed (in milliseconds) of typing.
+var speedForward = 50, //Typing Speed
+    speedWait = 5000, // Wait between typing and backspacing
+    speedBetweenLines = 3000, //Wait between first and second lines
+    speedBackspace = 10; //Backspace Speed
+
+//Run the loop
+typeWriter("output", textArray);
+
+function typeWriter(id, ar) {
+  var element = $("#" + id),
+      aString = ar[a],
+      eHeader = element.children("pre"), //Header element
+      eParagraph = element.children("p"); //Subheader element
+  
+  // Determine if animation should be typing or backspacing
+  if (!isBackspacing) {
+    
+    // If full string hasn't yet been typed out, continue typing
+    if (i < aString.length) {
+
+		if (i == 0) {
+			$("#received").hide();
+			$("#waiting").show();
+
+			if (a == 0)
+			$("#response-api-" + (textArray.length - 1)).hide()
+			else
+				$("#response-api-" + (a - 1)).hide()
+		}
+      
+      // If character about to be typed is a pipe, switch to second line and continue.
+      if (aString.charAt(i) == "|") {
+        isParagraph = true;
+        eHeader.removeClass("cursor");
+        eParagraph.addClass("cursor");
+        i++;
+        setTimeout(function(){ typeWriter(id, ar); }, speedBetweenLines);
+        
+      // If character isn't a pipe, continue typing.
+      } else {
+        // Type header or subheader depending on whether pipe has been detected
+        if (!isParagraph) {
+          eHeader.text(eHeader.text() + aString.charAt(i));
+        } else {
+          eParagraph.text(eParagraph.text() + aString.charAt(i));
+        }
+        i++;
+        setTimeout(function(){ typeWriter(id, ar); }, speedForward);
+      }
+      
+    // If full string has been typed, switch to backspace mode.
+    } else if (i == aString.length) {
+      
+	  isBackspacing = true;
+	  hljs.highlightBlock(document.getElementById('output'));
+	  
+	  $("#received").show();
+	  $("#waiting").hide();
+
+	  if (a == 0)
+	  {
+		$("#response-api-" + (textArray.length - 1)).hide();
+	  }
+	  if (a != 0) {
+		$("#response-api-" + (a-1)).hide();
+	  }
+	  $("#response-api-" + a).show()
+	  //$("#received").show();
+	 // $("#response-api-" + a).show();
+
+      setTimeout(function(){ typeWriter(id, ar); }, speedWait);
+      
+    }
+    
+  // If backspacing is enabled
+  } else {
+    
+    // If either the header or the paragraph still has text, continue backspacing
+
+	if (eHeader.text().length > 0) {
+
+      eParagraph.removeClass("cursor");
+      eHeader.addClass("cursor");
+      eHeader.text(eHeader.text().substring(0, eHeader.text().length - 1));
+      setTimeout(function(){ typeWriter(id, ar); }, speedBackspace);
+    }
+
+	else { 
+
+
+	  //eHeader.text(eHeader.text().substring(0, eHeader.text().length - 1));
+      isBackspacing = false;
+      i = 0;
+      isParagraph = false;
+      a = (a + 1) % ar.length; //Moves to next position in array, always looping back to 0
+      setTimeout(function(){ typeWriter(id, ar); }, 50);
+      
+    }
+  }
+}
+	</script>
+
+</body>
+</html> 
+

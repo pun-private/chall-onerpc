@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>One\RPC - Documentation</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/coderdocs-logo.svg"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    
+    <!-- Plugins CSS -->
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css"> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/atom-one-dark.min.css">
+
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head> 
+
+<body class="docs-page">    
+    <header class="header fixed-top" style="margin-right:50px; margin-left:50px">	    
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none" type="button">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	                </button>
+	                <div class="site-logo"><a class="navbar-brand" href="/"><img class="logo-icon me-2" src="assets/images/coderdocs-logo.svg" alt="logo"><span class="logo-text">One<span class="text-alt">\RPC</span></span></a></div>   
+                </div><!--//docs-logo-wrapper-->
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+		            	
+		            <a href="download/onerpc_latest.zip" class="btn btn-primary d-none d-lg-flex">Download</a>
+	            </div><!--//docs-top-utilities-->
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    
+    <div class="docs-wrapper">
+	    <div id="docs-sidebar" class="docs-sidebar" style="margin-left:50px">
+		    <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+		        </form>
+            </div>
+		    <nav id="docs-nav" class="docs-nav navbar">
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
+				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Introduction</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Single route</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Requests and Responses</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Automatic API loader</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">Namespaces & Security</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-5">Your first API</a></li>
+				    
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Developement</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Production</a></li>
+				    
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder me-2"><i class="fas fa-box"></i></span>API Examples</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Handle parameters</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Nested Namespaces</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">Throwing errors</a></li>
+				    
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder me-2"><i class="fas fa-book-reader"></i></span>Changelog</a></li>
+				    
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
+			    </ul>
+
+		    </nav><!--//docs-nav-->
+	    </div><!--//docs-sidebar-->
+	    <div class="docs-content">
+		    <div class="container">
+			    <article class="docs-article" id="section-1">
+				    
+					<header class="docs-header">
+					    <h1 class="docs-heading">Introduction</h1>
+					    <section class="docs-intro">
+						    <p><strong>One\</strong>RPC aims to accelerate your APIs development by combining existing concepts.</p>
+						</section><!--//docs-intro-->
+						
+						<div class="table-responsive my-4">
+							<table class="table table-bordered">
+								<tbody>
+								    <tr>
+									    <th class="theme-bg-light"><a class="theme-link" href="#item-1-1">Single route:</a></th>
+									    <td>all your requests are sent to a unique URL. Only your request's body changes.</td>
+									</tr>
+									<tr>
+									      <th class="theme-bg-light"><a class="theme-link" href="#item-1-2">Uniform requests and responses:</a></th>
+									      <td>all requests and responses from any API follow the same json format.</td>
+									</tr>
+									
+									<tr>
+									    <th class="theme-bg-light"><a class="theme-link" href="#item-1-3">Dynamic API loader:</a></th>
+									    <td>just drop your new API file into a folder and it will be loaded automatically without changing anything else !</td>
+									</tr>
+									
+									<tr>
+									    <th class="theme-bg-light"><a class="theme-link" href="#item-1-4">Smart namespacing:</a></th>
+									    <td>your APIs are divided using namespaces to ensure security and structural logic.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!--//table-responsive-->
+
+				    </header>
+
+				    <section class="docs-section" id="item-1-1">
+						<h2 class="section-heading">Single Route</h2>
+						<p>Traditional REST APIs requires you to map objects against endpoints. And to perform actions on each object, HTTP verbs (GET, POST, PUT, DELETE, etc) must be used.</p>
+						<p>In the case of One\RPC, POST requests are sent to the same URL everytime.</p>
+
+						<h5>URL differences between REST and One\RPC : </h5>
+						<div class="container"><div class="row">
+							<div class="col-6">
+								<div class="table-responsive my-4">
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th scope="col">REST API</th>
+												<th scope="col">One\RPC API</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><pre>GET /rest/user/42</pre></td>
+												<td><pre><strong>POST /rpc/</strong></pre></td>
+											</tr>
+											<tr>
+												<td><pre>POST /rest/user/</pre></td>
+												<td><pre><strong>POST /rpc/</strong></pre></td>
+											</tr>
+											<tr>
+												<td><pre>DELETE /rest/user/42</pre></td>
+												<td><pre><strong>POST /rpc/</strong></pre></td>
+											</tr>
+										</tbody>
+									</table>
+								</div><!--//table-responsive-->
+							</div>
+
+						</div></div>
+						
+                        
+                        
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-1-2">
+						<h2 class="section-heading">Requests and Responses</h2>
+						<p>All requests and responses follow the same format.</p>
+						
+						<h5 class="mt-5">Requests format :</h5>
+						<p>
+							A request should always have the <strong>api namespace</strong>, the <strong>function to call</strong> and optionally the <strong>parameters</strong> to pass to the function.
+						</p>
+						<div class="container"><div class="row">
+							<pre class="col-6">
+								<code>
+{
+	"api"  : "&lt;namespace&gt;",
+	"func" : "&lt;function&gt;",
+	"args" : [
+		// parameters here
+	]
+}								
+								</code>
+							</pre>
+						</div></div>
+						
+						<h5 class="mt-5">Response format :</h5>
+						<p>
+							The response sent by the API is also a json with a key ("response" for success or "error" if an error occured) and a value.
+						</p>
+						<div class="container"><div class="row">
+							<div class="col-lg-6">
+								<h6><i>Success response</i></h6>
+								<pre>
+									<code>
+{
+	"response"  : // value (any type of object)
+}								
+									</code>
+								</pre>
+							</div>
+							<div class="col-lg-6">
+								<h6><i>Error response</i></h6>
+								<pre>
+									<code>
+{
+	"error"  : "&lt;message&gt;"
+}								
+									</code>
+								</pre>
+							</div>
+						</div></div>
+						
+						
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-1-3">
+						<h2 class="section-heading">Automatic API Loader</h2>
+						<p>One\RPC architecture is simple and allows you to easily add new APIs without having to worry about dependencies.</p>
+						<h5>Project architecture</h5>
+						<pre style="max-width: 500px;"><code class="language-plaintext">
+ .
+ |____ API/  <-- copy your API files here
+ |     |____ Greeting.php
+ |
+ |____ Public/  <-- only expose this folder
+ |     |____ index.php
+ |
+ |____ deps_loader.php  <-- automatic API loader 
+ |____ dispatcher.php   <-- One\RPC core functions
+						</code></pre>
+						
+						<p><strong>Drop your API code into the "API" folder and it's done !</strong></p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-1-4">
+						<h2 class="section-heading">Namespaces & Security</h2>
+						<p>The core of One\RPC is based on <i>namespaces</i>.<br> Each API you develop must be <strong>within a namespace</strong> and <strong>each function you want to be callable must be prefixed</strong> with <code>register_</code>.</p>
+						<br>
+						<p>As for security, the use of namespaces and the function prefix ensure <strong>only intended functions can be called</strong> ! <br>For additional mitigation, we have set a <strong>blacklist</strong> to deny the use of any native php functions such as <code>system</code>, <code>file_get_contents</code>, etc.</p>
+						
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-1-5">
+						<h2 class="section-heading">Your first API</h2>
+						<p>In this last section of the introduction, we are going to develop your first API.</p>
+						<p>First, you need to <strong>download</strong> One\RPC <a href="download/onerpc_latest.zip">here</a> and <strong>start a PHP server</strong> as following :</p>
+						<pre><code class="language-plaintext">mkdir onerpc_tutorial
+cd onerpc_tutorial
+wget <span class="full_link"></span>/download/onerpc_latest.zip
+unzip onerpc_latest.zip
+cd Public
+php -S 127.0.0.1:8888
+</code></pre>
+						<p>Create a file <code>Greeting.php</code> into the <code>API</code> folder with this PHP Code :</p>
+						<pre><code>&lt;?php
+namespace Greeting;
+
+function register_hello() {
+	return "Hello World !";
+}
+						</code></pre>
+						<p>And that's sit ! You have created your first API as simple as that. We can use <code>curl</code> to check if everything is working as intended.</p>
+						<pre><code>$> curl -X POST http://127.0.0.1:8888/ -d '{ "api":"Greeting", "func":"hello" }'
+{
+	"result": "Hello World !"
+}</code></pre>
+					</section><!--//section-->
+			    </article>
+			    
+			    <article class="docs-article" id="section-2">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Installation</h1>
+					    
+				    </header>
+				     <section class="docs-section" id="item-2-1">
+						<h2 class="section-heading">Developement</h2>
+						<p>Download the lastest version of One\RPC and start a local php server.</p>
+						<pre><code class="language-plaintext">mkdir onerpc_dev
+cd onerpc_dev
+wget <span class="full_link"></span>/download/onerpc_latest.zip
+unzip onerpc_latest.zip
+cd Public
+php -S 127.0.0.1:8888</code></pre>
+						<p>You are ready to develop your API !</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-2-2">
+						<h2 class="section-heading">Production</h2>
+						<p>On apache, you need to point your vhost config to the <code>Public</code> folder. Here's an example for deploying your API on the <code>/rpc</code> URI :</p>
+						<pre><code>&lt;VirtualHost *:80&gt;
+	# ...
+
+	Alias /rpc  "/absolute/path/to/rpcone_folder/Public"
+	
+	# ...
+&lt;/VirtualHost&gt;							
+						</code></pre>
+						
+					</section><!--//section-->
+					
+			    <article class="docs-article" id="section-3">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">API Examples</h1>
+					    <section class="docs-intro">
+						    <p>In the <a href="#item-1-5">"Your first API" section</a>, we showed there are two mandatory things to implement for your API :</p>
+							<ul>
+								<li>a namespace</li>
+								<li>a callable function must be prefixed with <code>register</code></li>
+							</ul>
+							<p>The following examples demonstrate how to handle parameters, better organize your code with nested namespaces and throw errors in your APIs.</p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-3-1">
+						<h2 class="section-heading">Handling parameters</h2>
+						<p>Any API needs to handle parameters sent from the users. One\RPC allows you not to worry about received parameters for each function. All you have to do is create the callable function with your desired parameters.</p>
+						<h3>Basic parameter</h3>
+						<p>You need to pass a single parameter to your function ? Let's create a function <code>register_welcome</code> into your <code>Greeting</code> namespace :</p>
+						<pre><code>function register_welcome($name) {
+	return "Welcome $name !";
+}</code></pre>
+						<p>It's that easy ! Now go ahead and test it against our demo-rpc instance :</p>
+						<pre><code class="language-plaintext">$> curl -X POST '<span class="full_link"></span>/demo-rpc/' --data-raw  \
+'{
+    "api" : "Greeting",
+    "func": "welcome",
+    "args": [
+        "Chuck"
+    ]
+}'
+
+{
+    "result": "Welcome Chuck !"
+}</code></pre>
+					<h3>Advanced parameters</h3>
+					<p>You need more parameters of different types ? Again, no problem at all. Let's create a function called <code>register_who_are_you</code> that takes as parameters a string, an integer and an array :</p>
+					<pre><code>function register_who_are_you(string $name, int $age, array $hobbies) {
+	$text = "Your name is $name and you are $age years old. ";
+
+	if (empty($hobbies))
+		return $text;
+
+	$text .= "Your hobbies are : " . implode(', ', $hobbies) . ".";
+	
+	return $text;
+}					</code></pre>
+					<div class="callout-block callout-block-info">
+												
+						<div class="content">
+							<h4 class="callout-title">
+								<span class="callout-icon-holder me-1">
+									<i class="fas fa-info-circle"></i>
+								</span><!--//icon-holder-->
+								Note
+							</h4>
+							<p>In this example, we forced arguments typing with <code>string</code>, <code>int</code> and <code>array</code>. If you are using PHP 7.4 or above, we strongly suggest you using this method for handling parameters type.</p>
+						</div><!--//content-->
+					</div><!--//callout-block-->
+
+					<p>Then the request must contain the parameters <code>args</code> as the following :</p>
+					<pre><code class="language-plaintext">$> curl -X POST '<span class="full_link"></span>/demo-rpc/' --data-raw \
+'{
+    "api" : "Greeting",
+    "func": "who_are_you",
+    "args": [
+        "Chuck",
+        42,
+        [
+            "beating bad guys",
+            "shooting movies",
+            "chocolatines"
+        ]
+    ]
+}'
+
+{
+	"result": "Your name is Chuck and you are 42 years old. Your hobbies are : beating bad guys, shooting movies, chocolatines."
+}</code></pre>
+
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-3-2">
+						<h2 class="section-heading">Nested Namespaces</h2>
+						<p>You can structure your API code using folders and namespaces. Imagine you want to create APIs that convert strings into a specific language such as <code>Binary</code> or <code>LeetSpeak</code>. One way to make a logical structure for this case is to create two files under the <code>API</code> folder as following :</p>
+                        <pre><code>.
+|____ API/  
+|     |____ Language/
+|           |____ Binary.php
+|           |____ LeetSpeak.php
+                        </code></pre>
+                        <p>In each file, use two levels namespaces : <code>Language\Binary</code> and <code>Language\LeetSpeak</code>.</p>
+                        <p><code>LeetSpeak.php</code> source code :</p>
+                        <pre><code>&lt;?php 
+namespace Language\LeetSpeak; // namespace is the same as the folder structure
+
+/* *************************** Non accessible code *************************** */
+
+define('CHARSET', [
+    'latin' => str_split('ABEGIOPRST'),
+    'leet'  => str_split('4836109257')
+]);
+
+/* *************************** Exposed functions *************************** */
+
+function register_encode($str) {
+    return str_replace(CHARSET['latin'], CHARSET['leet'], strtoupper($str));
+}
+
+function register_decode($str) {
+    return str_replace(CHARSET['leet'], CHARSET['latin'], strtoupper($str));
+}
+                        </code></pre>
+                        <p>Request :</p>
+                        <pre><code class="language-plaintext">$> curl -X POST '<span class="full_link"></span>/demo-rpc/' --data-raw \
+'{
+    "api" : "Language\\LeetSpeak",
+    "func": "encode",
+    "args": [
+        "One route for all !",
+    ]
+}'
+
+{
+    "result": "0N3 20U73 F02 4LL !"
+}
+                        </code></pre>
+                        <div class="callout-block callout-block-warning">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-bullhorn"></i>
+		                            </span><!--//icon-holder-->
+	                                Warning
+	                            </h4>
+                                <p>When you use nested namespaces in your API JSON request, make sure to double the backslash character (<code>\\</code>) or it will not be considered in the JSON.</p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+                        <p>There is no limitations on the number of namespaces that can be used. Just make sure to use the <strong>full absolute namespace path</strong> in the begining of each API file.</p>
+					
+					<section class="docs-section" id="item-3-3">
+						<h2 class="section-heading">Throwing erros</h2>
+						<p>Handling logical or any other type of errors is crucial for your APIs. It is really easy to do so in One\RPC.</p>
+                        <p>Remember our <code>register_who_are_you</code> function we set previously ? One of its parameter is the age of the user. Imagine we want to check if the user is a minor before proceeding the request...</p>
+                        <p>First, let's create a private function <code>is_minor</code> that checks the user's age and call it in our <code>register_who_are_you</code> function.</p>
+                        <pre><code>&lt;?php 
+
+namespace Greeting;
+
+/* *************************** private functions *************************** */
+
+function is_minor($age) {
+    if ($age &lt; 18)
+        throw new \Exception("You are not old enough to request this method.");
+}
+
+/* *************************** Exposed functions **************************** */
+
+function register_who_are_you($name, $age, $hobbies) {
+
+    is_minor($age);
+
+    $text = "Your name is $name and you are $age years old. ";
+
+    if (empty($hobbies))
+        return $text;
+
+    $text .= "Your hobbies are : " . implode(', ', $hobbies) . ".";
+    
+    return $text;
+}
+                        </code></pre>
+                        <p>With the <code>is_minor</code> function, if the user's age is less than 18 years old, we throw an <code>\Exception</code>. It will be later catched by One\RPC dispatcher if the error occured. Let's try it !</p>
+                        <pre><code class="language-plaintext">$> curl -X POST '<span class="full_link"></span>/demo-rpc/' --data-raw \
+'{
+    "api" : "Greeting",
+    "func": "who_are_you",
+    "args": [
+        "Kevin",
+        13,
+        [
+            "Fortnite"
+        ]
+    ]
+}'
+
+{
+    "error": "You are not old enough to request this method."
+}
+                    </code></pre>
+                    <p>The response contains an <code>error</code> key with the error message we specified in the <code>is_minor</code> function !</p>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    <article class="docs-article" id="section-4">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Changelog</h1>
+				    </header>
+                    <pre style="overflow: hidden;"><code class="nohighlight">
+# Changelog
+All notable changes to this project will be documented in this file.
+
+## [0.6]
+### Changed
+- triming ending backslashes in the "api" key.
+
+## [0.5]
+### Added
+- API automatic loader for files dropped in the API folder.
+
+## [0.5]
+### Security
+- Mitigation for potential arbitrary code execution by not allowing the use of php internal function calls during a request.
+
+## [0.4]
+### Security
+- Fixed a vulnerability where a user could call any functions :
+    * "api" cannot be empty anymore and only some characters are allowed
+    * only functions prefixed with `&lt;usernamespace&gt;\register_*` are callable
+
+## [0.3]
+### Changed
+- Dynamic API functions calls now handle any number and type of parameters.
+
+## [0.2]
+### Added
+- Namespaces prefix are now used to call dynamic API functions.
+
+## [0.1]
+### Added
+- First release !
+
+                    </code></pre>
+			    </article><!--//docs-article-->
+			    
+			    
+			    <article class="docs-article" id="section-5">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">FAQs</h1>
+				    </header>
+				     <section class="docs-section" id="item-5-1">
+						
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Why should I use One\RPC over REST or SOAP ?</h5>
+						<p>One\RPC have three main advantages :<br>
+                        - a <strong>single URL</strong> : all requests are made againt a single URL. You don't need to worry about future routes...<br>
+                        - <strong>one method (POST)</strong> : contrary to REST APIs, you only have to use one HTTP verb for all your requests (less backend configuration as well)<br>
+                        - a <strong>simple JSON</strong> request/response : SOAP requests/responses can be quite overwhelming ! One\RPC use the same JSON structure for all requests and responses.</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>If all your functions are called dynamically, is it secure ?</h5>
+						<p>Only function <code>register_*</code> functions within user's namespaces can be called. Furthemore, we have added mitigations to prevent from calling native PHP functions. If you believe you found a <strong>vulnerability</strong>, make sure to send us proof !</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Is One\RPC compatible with all PHP version ?</h5>
+						<p>All our tests were performed on an instance of <strong>PHP 7.4</strong> (the demo-rpc has the same version as well). It should also work on PHP 8.</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Why is this project so awesome ?</h5>
+						<p>We like simple, clean and effective APIs ! We feel REST and SOAP APIs are like this disturbing saying : &#10077;Pigeons are Unsettling Nuggets&#10078;</p>
+					</section><!--//section-->
+
+			    <footer class="footer">
+				    <div class="container text-center py-5">
+				        <small class="copyright">Template Copyright &copy; <a href="https://themes.3rdwavemedia.com/" target="_blank">3rd Wave Media</a></small>
+				    </div>
+			    </footer>
+		    </div> 
+	    </div>
+    </div><!--//docs-wrapper-->
+   
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+    <!-- Page Specific JS -->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <!-- <script src="assets/js/highlight-custom.js"></script>  -->
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <script src="assets/js/docs.js"></script> 
+	<script>
+		$( document ).ready(function() {
+			var current_url = location.protocol + '//' + location.host;
+			$('.full_link').text(current_url);
+	});
+	</script>
+	<script>hljs.highlightAll();</script>
+
+</body>
+</html> 
+
