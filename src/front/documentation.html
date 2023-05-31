@@ -434,7 +434,7 @@ function register_decode($str) {
                         <p>There is no limitations on the number of namespaces that can be used. Just make sure to use the <strong>full absolute namespace path</strong> in the begining of each API file.</p>
 					
 					<section class="docs-section" id="item-3-3">
-						<h2 class="section-heading">Throwing erros</h2>
+						<h2 class="section-heading">Throwing errors</h2>
 						<p>Handling logical or any other type of errors is crucial for your APIs. It is really easy to do so in One\RPC.</p>
                         <p>Remember our <code>register_who_are_you</code> function we set previously ? One of its parameter is the age of the user. Imagine we want to check if the user is a minor before proceeding the request...</p>
                         <p>First, let's create a private function <code>is_minor</code> that checks the user's age and call it in our <code>register_who_are_you</code> function.</p>
