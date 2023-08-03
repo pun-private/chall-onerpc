@@ -9,4 +9,6 @@ RUN a2enmod headers
 
 WORKDIR /var/www
 
+HEALTHCHECK --interval=30s --timeout=3s CMD curl http://localhost/
+
 EXPOSE 80
